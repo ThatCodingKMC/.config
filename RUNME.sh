@@ -9,6 +9,7 @@
 # Needed maybe to get other plugins, I should script the getting of plugins and to installing of them.
 # Check for git ahead of running script, either get git or close script.
 
+# Add nvim mkviews for the files to the install so it can come prefolded.
 
 
 # MUST BE DONE AFTER TMUX IS SET UP

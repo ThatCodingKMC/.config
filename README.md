@@ -2,7 +2,7 @@
 
 This repository has everything that is needed to setup my development environment. This is done by running one command as mentioned in the installation section of this README.
 
-My development environment is composed of nvim, tmux, and soon to be added zsh. Many plugins are used with these tools. Note that I use <space> as my leader for nvim and <Ctrl>+<a> for my tmux leader.
+My development environment is composed of nvim, tmux, and soon to be added zsh. Many plugins are used with these tools. Note that I use "space" as my leader for nvim and "Ctrl" + "a" for my tmux leader.
 
 ## Installation
 Installation requires that you already have git installed. To install and have everything setup as I like it, you just have to run the one bash command below:
@@ -17,7 +17,8 @@ Note that if you already have contents in your ~/.config folder the command will
 
 When I get around to it I will list of the commands/hotkeys unique to my setup here and any other usage tips.
 
-- You can reload tmux configs using <leader>r
+- You can reload tmux configs using "leader" + "r"
+- Moving between split panels is done with "Ctrl" + vim keys. This works across vim/tmux panel boundaries.
 
 ## Contributing
 

@@ -1,6 +1,7 @@
 require "nvchad.mappings"
 
 -- add yours here
+vim.keymap.set("!", "<C-j>", "<cmd><C-U>TmuxNavigateDown<CR>")
 
 local map = vim.keymap.set
 

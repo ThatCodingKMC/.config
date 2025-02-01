@@ -23,7 +23,22 @@ require("lazy").setup({
   },
 
   { import = "plugins" },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+      "TmuxNavigatorProcessList",
+    },
+  },
+
 }, lazy_config)
+
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
@@ -35,3 +50,25 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.keymap.set("!", "<C-h>", "<cmd>TmuxNavigateLeft<CR>")
+vim.keymap.set("!", "<C-j>", "<cmd>TmuxNavigateDown<CR>")
+vim.keymap.set("!", "<C-k>", "<cmd>TmuxNavigateUp<CR>")
+vim.keymap.set("!", "<C-l>", "<cmd>TmuxNavigateRight<CR>")
+vim.keymap.set("!", "<C-\\>", "<cmd>TmuxNavigatePrevious<CR>")
+
+-- Enable saving and restoring folds
+vim.opt.foldmethod = "manual"  -- Or any fold method you prefer (e.g., "indent", "syntax", etc.)
+vim.opt.foldenable = true      -- Ensure folding is enabled
+
+vim.api.nvim_create_autocmd({"BufWinLeave"}, {
+  pattern = "*",
+  command = "mkview",  -- Save the folds when leaving a buffer
+})
+
+vim.api.nvim_create_autocmd({"BufWinEnter"}, {
+  pattern = "*",
+  command = "silent! loadview",  -- Restore the folds when entering a buffer
+})
+
+
