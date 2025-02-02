@@ -1,12 +1,12 @@
-# ThatOneKMC's Development Environment
+# ThatOneKMC's Development Environment (IN PROGRESS DONT USE)
 
-This repository has everything that is needed to setup my development environment. This is done by running one command as mentioned in the installation section of this README.
+This repository has everything that is needed to setup my development environment on Linux (including WSL). This is done by running one command as mentioned in the installation section of this README.
 
 My development environment is composed of nvim, tmux, and soon to be added zsh. Many plugins are used with these tools. Note that I use "space" as my leader for nvim and "Ctrl" + "a" for my tmux leader.
 
 ## Installation
 
-For everything to function properly you will need to use a non-Mono [Nerd Font](https://www.nerdfonts.com/font-downloads) for your terminal. This is not included in the one command installation to ensure the scrpt stays wsl compatible. I personally suggest using Hack Nerd Font Regular which is found in the .zip you can download by pressing [this](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip). 
+Before installation, set your terminal to a non-Mono <a href="https://www.nerdfonts.com/font-downloads" target="_blank" rel="noopener noreferrer">Nerd Font</a>. If you are using a WSL, you will need to install the font to Windows and not the WSL. I personally suggest using "Hack Nerd Font Regular" as your font, which can be found in the .zip downloaded by pressing [this link](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip). 
 
 Installation requires that you already have git installed. To install and have everything setup as I like it, you just have to run the one bash command below:
 
