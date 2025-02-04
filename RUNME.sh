@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #!/bin/bash
 
 # TODO
@@ -15,7 +16,7 @@
 # Find and store the package manager, exit if not found.
 PACKAGE_MANAGER="unknown"
 
-command -v apt-get  && PACKAGE_MANAGER="apt-get"
+command -v apt-get  && PACKAGE_MANAGER="apt"
 command -v yum      && PACKAGE_MANAGER="yum"
 command -v dnf      && PACKAGE_MANAGER="dnf"
 command -v zypper   && PACKAGE_MANAGER="zypper"
@@ -26,7 +27,34 @@ if ["$PACKAGE_MANAGER" == "unknown"]; then
   exit 1
 fi
 
-echo "Detected package manager: $PACKAGE_MANAGER"
+echo "Using detected package manager: $PACKAGE_MANAGER"
+
+
+# Install softwares using the found package manager.
+INSTALL_LIST="tmux neovim gcc gdb"
+echo "Installing softwares: $INSTALL_LIST"
+
+case "$PACKAGE_MANAGER" in
+    apt)
+        sudo apt-get update && sudo apt-get install -y $INSTALL_LIST
+        ;;
+    yum)
+      sudo yum install -y $INSTALL_LIST || (sudo yum install -y epel-release && sudo yum install -y $INSTALL_LIST)
+        ;;
+    dnf)
+        sudo dnf install -y $INSTALL_LIST
+        ;;
+    zypper)
+        sudo zypper install -y $INSTALL_LIST
+        ;;
+    pacman)
+        sudo pacman -S --noconfirm $INSTALL_LIST
+        ;;
+    *)
+        echo "Package manager not compatible: $PACKAGE_MANAGER" # This should never run due to previous filtering.
+        exit 1
+        ;;
+esac
 
 
 
@@ -40,7 +68,7 @@ echo "Detected package manager: $PACKAGE_MANAGER"
 ### ~/.config/tmux/plugins/tpm/bin/install_plugins
 
 
-
+# Delete this script and .git? Only for a sable version.
 
 
 
