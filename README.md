@@ -1,4 +1,4 @@
-# ThatOneKMC's Development Environment (IN PROGRESS DONT USE)
+# ThatOneKMC's Development Environment
 
 This repository has everything that is needed to setup my CLI development environment on Linux (including WSL). This is done by running one command as mentioned in the installation section of this README.
 

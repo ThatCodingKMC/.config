@@ -11,7 +11,6 @@
 # Check for git ahead of running script, either get git or close script.
 # get gdb, gcc, python, pwn tools, etc.
 # Add nvim mkviews for the files to the install so it can come prefolded.
-# Add sudo to the front so it doesn't have to be entered in the middle of the script
 
 
 
