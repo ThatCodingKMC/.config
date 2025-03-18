@@ -68,5 +68,5 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ~/.config/tmux/plugins/tpm/bin/install_plugins
 
 
-
+echo "END OF DEVELOPMENT ENVIROMENT SETUP SCRIPT REACHED WITHOUT EXIT"
 
