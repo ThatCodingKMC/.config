@@ -12,7 +12,8 @@
 # get gdb, gcc, python, pwn tools, etc.
 # Add nvim mkviews for the files to the install so it can come prefolded.
 
-
+# Install line to get pwntools, must do this for all python packages. 
+# sudo apt install python3-pwntools
 
 
 
